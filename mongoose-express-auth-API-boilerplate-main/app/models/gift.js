@@ -1,14 +1,18 @@
 const mongoose = require('mongoose')
 
-const exampleSchema = new mongoose.Schema(
+const giftSchema = new mongoose.Schema(
 	{
-		title: {
+		Name: {
 			type: String,
 			required: true,
 		},
-		text: {
+		Type: {
 			type: String,
 			required: true,
+		},
+		Cost: {
+			type: Number,
+			required: true
 		},
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
@@ -21,4 +25,4 @@ const exampleSchema = new mongoose.Schema(
 	}
 )
 
-module.exports = mongoose.model('Example', exampleSchema)
+module.exports = mongoose.model('Gift', giftSchema)
